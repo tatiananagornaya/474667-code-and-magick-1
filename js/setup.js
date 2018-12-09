@@ -15,7 +15,7 @@ var shuffleArray = function (array) {
     var temp = array[i];
     array[i] = array[j];
     array[j] = temp;
-  }
+   }
   return array;
 };
 
@@ -23,7 +23,7 @@ var getRemovedElement = function (array) {
   var shuffledArray = shuffleArray(array);
   var random = shuffledArray[Math.floor(Math.random() * shuffledArray.length)];
   return shuffledArray.splice(random, 1);
-};
+  };
 
 var getRandomElement = function (array) {
   return array[Math.floor(Math.random() * array.length)];
@@ -35,12 +35,12 @@ var createWizardName = function () {
   return name + ' ' + surname;
 };
 
-var createWizard = function (array) {
-	return {
-		name: createWizardName(),
-		coatColor: getRandomElement(COAT_COLOR),
-		eyesColor: getRandomElement(EYES_COLOR),
-	}
+var createWizard = function () {
+  return {
+    name: createWizardName(),
+    coatColor: getRandomElement(COAT_COLOR),
+    eyesColor: getRandomElement(EYES_COLOR),
+  };
 };
 
 var getWizardsArray = function () {
@@ -64,7 +64,7 @@ var createSimilarWizard = function (array) {
   template.querySelector('.wizard-coat').style.fill = array.coatColor;
   template.querySelector('.wizard-eyes').style.fill = array.eyesColor;
 
-  return template
+  return template;
 };
 
 var wizardsList = document.querySelector('.setup-similar-list');
