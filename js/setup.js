@@ -77,4 +77,3 @@ wizardsList.appendChild(fragment);
 
 var setupSimilarWizard = document.querySelector('.setup-similar');
 setupSimilarWizard.classList.remove('hidden');
-
